@@ -1,0 +1,2 @@
+# TeriTori
+TeriTori Testnet katılım
