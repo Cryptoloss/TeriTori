@@ -63,20 +63,8 @@ teritorid keys add wallet
 
 **Moniker** yerine node kurulum yaparken yazdığınız isimi giriniz.**Wallet** yerine ise cüzdan adınızı giriniz.
 ```
-teritorid tx staking create-validator \
---amount=980000utori \
---pubkey=$(teritorid tendermint show-validator) \
---moniker="Moniker" \
---chain-id=teritori-testnet-v2 \
---commission-rate=0.10 \
---commission-max-rate=0.20 \
---commission-max-change-rate=0.01 \
---min-self-delegation=1 \
---from=wallet \
---gas-prices=0.1utori \
---gas-adjustment=1.2 \
---gas=auto \
--y
+teritorid tx staking create-validator --chain-id teritori-testnet-v2 --commission-rate 0.1 --commission-max-rate 0.1 --commission-max-change-rate 0.1 --min-self-delegation "900000" --amount 900000utori --pubkey $(teritorid tendermint show-validator) --moniker “Cryptoloss” --from wallet --fees 555utori
+
 ```
 
 Aşağıdaki resimdeki gibi bir çıktı alacaksınız bu TX hash çıktısını Tori [explorerde](https://teritori.explorers.guru/) aratınız success dediyse validatörünüz oluşmuş demektir..
